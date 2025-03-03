@@ -1,0 +1,37 @@
+@use './variable' as *;  
+@use './mixin' as *;    
+
+//↑はSassの記述法で、この_base.scssファイルに_
+//variable.scssと_mixin.scssファイルの内容を呼び出すときに使う
+
+html {
+ scroll-behavior: smooth;
+ font-size:10px;
+ @include min(768) {
+  @include max(940) {
+   font-size: vw(10,940);
+  }
+ }
+ @include sp {
+   font-size: vw(10,375);
+ }
+}
+
+body {
+  font-family: "Yu Gothic","游ゴシック","YuGothic","游ゴシック体",sans-serif;
+
+  font-size: 1.8rem;
+  line-height: calc(33 / 18); 
+  font-weight: 700; //weightは「Medium」=500px,「Bold」＝700px,  
+  letter-spacing: 0;
+  // padding-top:
+}
+
+img {
+ width: 100%;
+ height: auto; 
+}
+
+a {
+ cursor: pointer;
+}

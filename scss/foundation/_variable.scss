@@ -1,0 +1,8 @@
+//color
+$color-red: #CB0000;
+
+
+@function vw($pixelSize, $baseWidth: 1080px) {
+  return vw($pixelSize / $baseWidth * 100vw);
+}
+//呼び出しは、vw(10,940)など

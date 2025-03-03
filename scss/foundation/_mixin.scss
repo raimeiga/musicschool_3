@@ -1,0 +1,28 @@
+@mixin pc {
+  @media only screen and (min-width:768px) {
+    @content;
+  }
+}
+// 呼び出しは、@include pc { スタイル }
+
+@mixin sp {
+  @media only screen and (max-width:767px) {
+    @content;
+  }
+}
+// 呼び出しは、@include sp { スタイル }
+
+
+@mixin min($width) {
+  @media only screen and (min-width:#{$width}) {
+    @content;   
+  }
+}
+//呼び出しは、@include min($width) { スタイル }
+
+@mixin max($width) {
+  @media only screen and (max-width:#{$width}) {
+    @content;   
+  }
+}
+//呼び出しは、@include max($width) { スタイル }
