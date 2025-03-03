@@ -1,0 +1,15 @@
+.content div {
+  width: 100%;
+}
+.content div h1 {
+  font-size: 36px;
+  font-weight: bold;
+  color: #dc143c;
+}
+.content div p {
+  font-size: 26px;
+}
+.content-img-area {
+  width: 100%;
+  background: rgba(220, 20, 60, 0.2);
+}
