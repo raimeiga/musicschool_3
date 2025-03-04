@@ -5,21 +5,23 @@
 //variable.scssと_mixin.scssファイルの内容を呼び出すときに使う
 
 html {
+ -webkit-appearance: none;
+ -webkit-text-size-adjust: 100%;
  scroll-behavior: smooth;
- font-size:10px;
+ word-break: break-all;
+ font-size: 10px;
  @include min(768) {
   @include max(940) {
-   font-size: vw(10,940);
+   font-size: vw(10, 940);
   }
  }
  @include sp {
-   font-size: vw(10,375);
+   font-size: vw(10, 375);
  }
 }
 
 body {
-  font-family: "Yu Gothic","游ゴシック","YuGothic","游ゴシック体",sans-serif;
-
+  font-family: "Yu Gothic","游ゴシック","YuGothic","游ゴシック体","Noto Sans JP",sans-serif;
   font-size: 1.8rem;
   line-height: calc(33 / 18); 
   font-weight: 700; //weightは「Medium」=500px,「Bold」＝700px,  
