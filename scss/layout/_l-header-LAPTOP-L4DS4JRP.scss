@@ -257,12 +257,15 @@
  justify-content: space-between;
  @include sp {
   display: block;
+
  }
 }
 
 .l-header-nav {
   height: inherit; 
-  @include sp {       
+  @include sp {
+   // display: block;  
+     
    width: 30rem;
    position: fixed;
    top: 5rem;
@@ -289,7 +292,6 @@
  height: inherit; 
  @include sp {
    height: 5.8rem;
-   width: 100%;   
  }
 }
 
@@ -303,11 +305,12 @@
  padding-top: 2.6rem;
  @include sp {
   background-color: $color-red; 
-  color: #fff; 
-  padding-top: 1.7rem;   
-  padding-inline: 1.9rem 0;    
-  font-size: 1.8rem;   
-  line-height: calc(33 / 18);
+  color: #fff;         
+  width: 100%;  
+  padding-top: 0.3rem;   
+    padding-left: 2rem;    
+    font-size: 1.8rem;   
+    line-height: calc(33 / 18);
  }
 }
 

@@ -1,0 +1,57 @@
+@use '../../foundation/variable' as *;
+@use '../../foundation/mixin' as *;
+
+.c-hamburger {
+ width: 7.1rem;
+ height: 100%;
+ background-color: $color-red;
+ display: flex;
+ justify-content: center;
+ align-items: center;     
+ //  display: grid;         //上下中央揃えを2行で書く記述法
+ //  place-content: center;   
+ cursor: pointer; 
+}
+
+.c-hamburger__inner {
+ width: 3.6rem;
+ height: 2.8rem;
+ background-color: $color-red;
+ position: relative;
+}
+
+.c-hamburger__inner span {
+ width: 100%;
+ height: 0.4rem;
+ background-color: #fff;
+ border-radius: 0.2rem;
+ position: absolute; //topはleftの次行に入れ子3連発で書く
+ left: 0;
+ transition: all 0.4s ease;
+}
+
+.c-hamburger__inner span:nth-of-type(1) {
+ top: 0;           //親要素spanのpositionのtop
+}
+
+.c-hamburger__inner span:nth-of-type(2) {
+ top: 1.2rem;
+}
+
+.c-hamburger__inner span:nth-of-type(3) {
+ top: 2.4rem;
+}
+
+.c-hamburger.active .c-hamburger__inner span:nth-of-type(1) {
+ top: 1.2rem;
+ transform: rotate(45deg);
+}
+
+.c-hamburger.active .c-hamburger__inner span:nth-of-type(2) {
+ display: none;
+}
+
+.c-hamburger.active .c-hamburger__inner span:nth-of-type(3) {
+ top: 1.2rem;
+ transform: rotate(-45deg);
+}

@@ -10,11 +10,9 @@ html {
  scroll-behavior: smooth;
  word-break: break-all;
  font-size: 10px;
- @include min(768) {
-  @include max(940) {
-   font-size: vw(10, 940);
-  }
- }
+ @media (min-width: 768px) and (max-width: 940px) {
+  font-size: vw(10, 940);
+}
  @include sp {
    font-size: vw(10, 375);
  }
@@ -37,3 +35,17 @@ img {
 a {
  cursor: pointer;
 }
+
+
+// PC、SPの非表示 とりあえず記述し、あとでhtmlで使う感じか？*/
+@media (max-width: 767px) {
+ .pc {
+   display: none !important;
+ }
+}
+@media (min-width: 768px) {
+ .sp {
+   display: none !important;
+ }
+}
+

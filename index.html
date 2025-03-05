@@ -1,13 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
 <head>
  <meta charset="UTF-8">
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
  <title>musicschool_3練習</title>
  <meta name="description" content="musicschool_3の紹介">
 
+ <!-- ファビコン設定 -->
+ <link rel="icon" href="images/favicon.ico">
  <!-- リセットCSS -->
  <link rel="stylesheet" href="css/reset.css"> 
+
+ <!-- slick（slick.css）読み込み -->
+ <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+  
  <!-- スタイルシート　-->
  <link rel="stylesheet" href="css/style.css">
 
@@ -18,48 +24,119 @@
 
 </head>
 <body>
-  <header>
-    <div class="p-header l-inner">
-      <div class="p-header-wrap">
-        <div class="p-header__logo p-header-logo">
-          <div class="p-header-logo__img">
-            <picture>
-              <source media="(max-width: 767px)" srcset="./images/logo-red32x49.svg">
-              <img src="./images/logo-red32x49.svg" alt="">
-            </picture>
-          </div>
-          <div class="p-header-logo__text">
-            <h1>きたむら<span>ミュージックスクール</span></h1>
-          </div>
+  <!-- <header>
+    <div class="l-header">      
+      <div class="l-header__logo l-header-logo">
+        <div class="l-header-logo__img">
+          <picture>
+            <source media="(max-width: 767px)" srcset="./images/logo-red32x49.svg">
+            <img src="./images/logo-red32x49.svg" alt="">
+           </picture>
         </div>
-        
-        <div class="p-header__nav p-header-nav">
-          <ul class="p-header-nav__lists">
+        <div class="l-header-logo__text">
+          <h1>きたむら<span>ミュージックスクール</span></h1>
+        </div>
+      </div>
+      <div class="l-header__right l-header-right">
+        <div class="l-header__nav l-header-nav">
+          <ul class="l-header-nav__lists">
             <a href="plan.html">
-              <li class="p-header-nav__list">料金</li>
+              <li class="l-header-nav__list">料金</li>
             </a>
             <a href="blog_list.html">
-              <li class="p-header-nav__list">ブログ</li>
+              <li class="l-header-nav__list">ブログ</li>
             </a>
             <a href="result_list.html">
-              <li class="p-header-nav__list">卒業実績</li>
+              <li class="l-header-nav__list">卒業実績</li>
             </a>
           </ul>
-        </div>
-      </div>    
-      <a href="contact_form.html" class="c-btn c-btn--header">お問い合わせ</a>
-    </div>    
-  </header>
+        </div>       
+        <a href="contact_form.html" class="c-btn c-btn--header">お問い合わせ</a>
+      </div>
+    </div>     
+  </header> -->
   
   <!--    
     <a href="" class="c-btn c-btn--fixed">お問い合わせ</a>
     <a href="" class="c-btn c-btn--contact">送信</a>
     <a href="" class="c-btn c-btn--backhome">ホームに戻る</a> -->
 
+  <!-- <header>
+    <div class="l-header">
+      <div class="l-header__logo l-header-logo">
+        <div class="l-header-logo__img">
+          <picture>
+            <source media="(max-width: 767px)" srcset="./images/logo-red32x49.svg">
+            <img src="./images/logo-red32x49.svg" alt="">
+          </picture>
+        </div>
+        <div class="l-header-logo__text">
+          <h1>きたむら<span>ミュージックスクール</span></h1>
+        </div>
+      </div>
+      <div class="l-header__right">
+        <nav class="l-header__nav l-header-nav">
+         <ul class="l-header-nav__lists">
+           <a href="">
+             <li class="l-header-nav__list">料金</li>
+           </a>
+           <a href="">
+             <li class="l-header-nav__list">ブログ</li>
+           </a>
+           <a href="">
+             <li class="l-header-nav__list">卒業実績</li>
+           </a>                      
+         </ul>
+         <a href="" class="c-btn c-btn--header">お問い合わせ</a>         
+        </nav>
+      </div>
+    </div>
+  </header> -->
   <header>
-   
+     <div class="l-header">
+
+       <a class="l-header__logo l-header-logo">         
+         <div class="l-header-logo__img">
+           <picture>
+             <source media="(max-width: 767px)" srcset="./images/logo-red-sp.svg">
+             <img src="./images/logo-red-pc.svg" alt="">
+           </picture>
+         </div>
+         <div class="l-header-logo__text">
+           <h1>きたむら<br class="pc"><span>ミュージックスクール</span></h1>
+         </div>  
+       </a>
+
+       <div class="l-header__right">
+         <div class="c-hamburger  js-hamburger sp">
+           <div class="c-hamburger__inner">
+             <span></span>
+             <span></span>
+             <span></span>
+           </div>
+         </div>
+
+         <nav class="l-header__nav l-header-nav">
+           <ul class="l-header-nav__lists">
+             <li class="l-header-nav__list">
+               <a href="">料金</a>
+             </li>             
+             <li class="l-header-nav__list">
+               <a href="">ブログ</a>
+             </li>
+             <li class="l-header-nav__list">
+               <a href="">卒業実績</a>
+             </li>
+           </ul>
+         </nav>
+         <a href="contact_form.html" class="c-btn c-btn--header pc">お問い合わせ</a>
+       </div>
+     </div>
+
   </header>
  
+
+
   <main>
    
 
@@ -68,5 +145,9 @@
   <footer>
   </footer>
 
+  <!--jQueryの読み込み --> 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <!-- javascriptの読み込み -->
+  <script src="./js/main.js"> </script>
 </body>
 </html>
